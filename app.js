@@ -1,15 +1,22 @@
-//parâmetros opcionais
-//! obs: os parâmetros opcionias sempre tem que ser os ultimos
+// JSON - encurtados
 
-function soma(a, b = 50) {
-  console.log(a + b);
-};
+var nome = "Anderson Jorge";
+var idade = 37;
+var empresa = "Google";
 
-function sub(a, b, inverter = false) {
-  if (inverter) {
-    return b - a;
-  } else {
-    return a - b;
-  }
-};
+// JSON - completo
+var user = {
+  nome: nome,
+  idade: idade,
+  empresa: empresa
+}
 
+// JSON - reduzido
+var user2 = {
+  nome,
+  idade,
+  empresa
+}
+
+console.log(user);
+console.log(user2);
