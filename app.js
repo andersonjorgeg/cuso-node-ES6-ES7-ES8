@@ -1,35 +1,31 @@
+// find
 
-function soma(a, b) {
-  console.log(a + b);
+var anderson = {
+  nome: "Anderson Jorge",
+  empresa: "ICN",
+  salario: 1000
 }
 
-let mult = function(a, b) {
-  console.log(a * b);
+var alan = {
+  nome: "Alan Paulo",
+  empresa: "Umbler",
+  salario: 800
 }
 
-// arrow functions
-
-let mult2 = (a, b, c) => {
-  console.log(a * b * c);
+var junior = {
+  nome: "Jorge Paulo",
+  empresa: "Disney",
+  salario: 500
 }
 
-// arrow function com um parâmetro
-let mult4 = a => {
-  console.log(a * 2);
-}
+var users = [anderson, alan, junior];
 
-// arrow function só com uma linha
-let mult5 = a => console.log(a * 3);
+var usuario = users.find(user => user.nome === "Anderson Jorge");
+var usuario2 = users.find(user => user.empresa === "ICN");
+var usuario3 = users.find(user => user.salario < 800);
 
-// arrow function com retorno de forma convencional
-let soma2 = (a, b) => {
-  return a + b;
-}
 
-let resultado = soma2(3, 5);
-
-console.log(resultado);
-
-// arrow function com retorno de forma reduzida
-let soma3 = (a, b) => a + b;
-console.log(soma3(4, 5));
+console.log(usuario);
+console.log(usuario2);
+console.log(usuario2.empresa);
+console.log(usuario3)
